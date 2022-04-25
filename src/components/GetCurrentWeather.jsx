@@ -56,7 +56,7 @@ export default function GetCurrentWeather() {
               <div className={classes["img-box"]}>
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/${weatherObj.weather[0].main}.svg`}
-                  className={classes["img-weather"]}
+                  className={classes["img-weather"]} alt="img-des"
                 />
               </div>
             </div>
