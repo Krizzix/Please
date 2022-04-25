@@ -26,7 +26,7 @@ export default function GetCurrentWeather() {
     //   days[d.getDay()]
     // },${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`;
     // setDate(dateConvert);
-    //
+   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lon]);
   useEffect(() => {
     const d = new Date(new Date().getTime() - timezone * 1000);
@@ -42,6 +42,7 @@ export default function GetCurrentWeather() {
     setDay(days[d.getDay()]);
     const dateConvert = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`;
     setDate(dateConvert);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timezone]);
   if (isError) {
     return <p>Không tìm thấy tên thành phố</p>;
